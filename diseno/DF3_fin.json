@@ -1,0 +1,1249 @@
+{
+  "version": 1,
+  "tabs": [
+    {
+      "id": "main",
+      "name": "main",
+      "type": "main"
+    }
+  ],
+  "selectedTabId": "main",
+  "docsByTab": {
+    "main": {
+      "nodes": {
+        "start": {
+          "id": "start",
+          "type": "Oval",
+          "text": "start",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "input_1794868202636",
+          "selected": false,
+          "running": false
+        },
+        "end": {
+          "id": "end",
+          "type": "Oval",
+          "text": "end",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "running": false
+        },
+        "input_1794868202636": {
+          "id": "input_1794868202636",
+          "type": "Parallelogram",
+          "ioKind": "Input",
+          "text": "modo_de_juego",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "loop_1794872661475",
+          "selected": false,
+          "prompt": "modo de juego: Solitario (escriba: 1)  Multijugador (escriba: 2)",
+          "running": false
+        },
+        "select_1794868480375": {
+          "id": "select_1794868480375",
+          "type": "Diamond",
+          "kind": "Selection",
+          "text": "modo_de_juego == 1",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "end",
+          "yesId": "output_1794868544476",
+          "noId": "output_1794868579566",
+          "selected": false,
+          "running": false
+        },
+        "output_1794868544476": {
+          "id": "output_1794868544476",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Modo de juego: Solitario\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "input_1794869454921",
+          "selected": false,
+          "running": false
+        },
+        "output_1794868579566": {
+          "id": "output_1794868579566",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Modo de juego: Multijugador\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "output_1794869566790",
+          "selected": false,
+          "running": false
+        },
+        "select_1794868683017": {
+          "id": "select_1794868683017",
+          "type": "Diamond",
+          "kind": "Selection",
+          "text": "tiempo==0 or vidas==0",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "yesId": "output_1794868731285",
+          "noId": "input_1794869003952",
+          "selected": false,
+          "running": false
+        },
+        "output_1794868731285": {
+          "id": "output_1794868731285",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Derrota: La partida a finalizado\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "select_1794868757455",
+          "selected": false,
+          "running": false
+        },
+        "select_1794868757455": {
+          "id": "select_1794868757455",
+          "type": "Diamond",
+          "kind": "Selection",
+          "text": "vidas==0",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "yesId": "output_1794868808384",
+          "noId": "output_1794868830505",
+          "selected": false,
+          "running": false
+        },
+        "output_1794868808384": {
+          "id": "output_1794868808384",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Vidas insuficientes\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "running": false
+        },
+        "output_1794868830505": {
+          "id": "output_1794868830505",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"tiempo insuficiente\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "running": false
+        },
+        "input_1794869003952": {
+          "id": "input_1794869003952",
+          "type": "Parallelogram",
+          "ioKind": "Input",
+          "text": "estado_de_nivel",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "loop_1794873146862",
+          "selected": false,
+          "prompt": "Ha terminado el nivel    Si(escriba 1) / No(escriba 0):",
+          "running": false
+        },
+        "select_1794869114957": {
+          "id": "select_1794869114957",
+          "type": "Diamond",
+          "kind": "Selection",
+          "text": "estado_de_nivel==1",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "yesId": "output_1794869137714",
+          "noId": "output_1794869165574",
+          "selected": false,
+          "running": false
+        },
+        "output_1794869137714": {
+          "id": "output_1794869137714",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Victoria! nivel finalizado.\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "running": false
+        },
+        "output_1794869165574": {
+          "id": "output_1794869165574",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Continuando la partida\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "running": false
+        },
+        "input_1794869454921": {
+          "id": "input_1794869454921",
+          "type": "Parallelogram",
+          "ioKind": "Input",
+          "text": "vidas",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "loop_1794871275452",
+          "selected": false,
+          "prompt": "Numero de vidas(0-3):",
+          "running": false
+        },
+        "input_1794869525623": {
+          "id": "input_1794869525623",
+          "type": "Parallelogram",
+          "ioKind": "Input",
+          "text": "tiempo",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "loop_1794871464838",
+          "selected": false,
+          "prompt": "Tiempo de partida (300s-0s, ingresa solo numeros):",
+          "running": false
+        },
+        "output_1794869566790": {
+          "id": "output_1794869566790",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Jugador 1, ingrese los siguientes requisitos\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "input_1794869603776",
+          "selected": false,
+          "running": false
+        },
+        "input_1794869603776": {
+          "id": "input_1794869603776",
+          "type": "Parallelogram",
+          "ioKind": "Input",
+          "text": "vidas_jugador_1",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "loop_1794871841653",
+          "selected": false,
+          "prompt": "Numero de vidas (0-3):",
+          "running": false
+        },
+        "input_1794869641535": {
+          "id": "input_1794869641535",
+          "type": "Parallelogram",
+          "ioKind": "Input",
+          "text": "tiempo_jugador_1",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "loop_1794871844559",
+          "selected": false,
+          "prompt": "Tiempo de partida (300s-0s):",
+          "running": false
+        },
+        "output_1794869699679": {
+          "id": "output_1794869699679",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Jugador 2, ingrese los siguientes requisitos\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "input_1794869718144",
+          "selected": false,
+          "running": false
+        },
+        "input_1794869718144": {
+          "id": "input_1794869718144",
+          "type": "Parallelogram",
+          "ioKind": "Input",
+          "text": "vidas_jugador_2",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "loop_1794871854457",
+          "selected": false,
+          "prompt": "Numero de vidas (0-3):",
+          "running": false
+        },
+        "input_1794869740734": {
+          "id": "input_1794869740734",
+          "type": "Parallelogram",
+          "ioKind": "Input",
+          "text": "tiempo_jugador_2",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "loop_1794871861644",
+          "selected": false,
+          "prompt": "Tiempo de partida (300s-0s):",
+          "running": false
+        },
+        "select_1794869760249": {
+          "id": "select_1794869760249",
+          "type": "Diamond",
+          "kind": "Selection",
+          "text": "vidas_jugador_1==0",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "yesId": "output_1794869816778",
+          "noId": "selection_1794869887678",
+          "selected": false,
+          "running": false
+        },
+        "output_1794869816778": {
+          "id": "output_1794869816778",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Partida finalizada: Derrota...Has perdido todas tus vidas, jugador 1\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "running": false
+        },
+        "selection_1794869887678": {
+          "id": "selection_1794869887678",
+          "type": "Diamond",
+          "kind": "Selection",
+          "text": "vidas_jugador_2==0",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "yesId": "output_1794869931989",
+          "noId": "selection_1794869954768",
+          "selected": false,
+          "running": false
+        },
+        "output_1794869931989": {
+          "id": "output_1794869931989",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Partida finalizada: Derrota...Has perdido todas tus vidas, jugador 2\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "running": false
+        },
+        "selection_1794869954768": {
+          "id": "selection_1794869954768",
+          "type": "Diamond",
+          "kind": "Selection",
+          "text": "tiempo_jugador_1==0",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "yesId": "output_1794869995380",
+          "noId": "selection_1794870031465",
+          "selected": false,
+          "running": false
+        },
+        "output_1794869995380": {
+          "id": "output_1794869995380",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Partida finalizada: Derrota...Se acabó el tiempo, jugador 1\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "running": false
+        },
+        "selection_1794870031465": {
+          "id": "selection_1794870031465",
+          "type": "Diamond",
+          "kind": "Selection",
+          "text": "tiempo_jugador_2==0",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "yesId": "output_1794870070273",
+          "noId": "input_1794870086448",
+          "selected": false,
+          "running": false
+        },
+        "output_1794870070273": {
+          "id": "output_1794870070273",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Partida finalizada: Derrota...Se acabó el tiempo, jugador 1\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "running": false
+        },
+        "input_1794870086448": {
+          "id": "input_1794870086448",
+          "type": "Parallelogram",
+          "ioKind": "Input",
+          "text": "estado_niveles",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "loop_1794872332272",
+          "selected": false,
+          "prompt": "Han terminado todos los niveles? Si(escribe:1) / No (escribe: 0):",
+          "running": false
+        },
+        "select_1794870143958": {
+          "id": "select_1794870143958",
+          "type": "Diamond",
+          "kind": "Selection",
+          "text": "estado_niveles==1",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "yesId": "output_1794870169105",
+          "noId": "output_1794870214304",
+          "selected": false,
+          "running": false
+        },
+        "output_1794870169105": {
+          "id": "output_1794870169105",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Victoria!, Jugador 1 y Jugador 2 Han ganado la partida\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "running": false
+        },
+        "output_1794870214304": {
+          "id": "output_1794870214304",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Continuando la partida\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "running": false
+        },
+        "loop_1794871275452": {
+          "id": "loop_1794871275452",
+          "type": "Diamond",
+          "kind": "Loop",
+          "text": "vidas>=0 and vidas<=3",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "input_1794869525623",
+          "beforeId": null,
+          "afterId": "input_1794871415314",
+          "selected": false,
+          "running": false
+        },
+        "input_1794871415314": {
+          "id": "input_1794871415314",
+          "type": "Parallelogram",
+          "ioKind": "Input",
+          "text": "vidas",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "output_1794872789349",
+          "selected": false,
+          "prompt": "Numero de vidas(0-3):",
+          "running": false
+        },
+        "loop_1794871464838": {
+          "id": "loop_1794871464838",
+          "type": "Diamond",
+          "kind": "Loop",
+          "text": "tiempo>=0 and tiempo<=300",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "select_1794868683017",
+          "beforeId": null,
+          "afterId": "output_1794872858555",
+          "selected": false,
+          "running": false
+        },
+        "loop_1794871841653": {
+          "id": "loop_1794871841653",
+          "type": "Diamond",
+          "kind": "Loop",
+          "text": "vidas_jugador_1>=0 and vidas_jugador_1<=3",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "input_1794869641535",
+          "beforeId": null,
+          "afterId": "output_1794872938523",
+          "selected": false,
+          "running": false
+        },
+        "loop_1794871844559": {
+          "id": "loop_1794871844559",
+          "type": "Diamond",
+          "kind": "Loop",
+          "text": "tiempo_jugador_1 >= 0 AND tiempo_jugador_1 <= 300",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "output_1794869699679",
+          "beforeId": null,
+          "afterId": "output_1794872988940",
+          "selected": false,
+          "running": false
+        },
+        "loop_1794871854457": {
+          "id": "loop_1794871854457",
+          "type": "Diamond",
+          "kind": "Loop",
+          "text": "vidas_jugador_2>=0 and vidas_jugador_2<=3",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "input_1794869740734",
+          "beforeId": null,
+          "afterId": "output_1794873021229",
+          "selected": false,
+          "running": false
+        },
+        "loop_1794871861644": {
+          "id": "loop_1794871861644",
+          "type": "Diamond",
+          "kind": "Loop",
+          "text": "tiempo_jugador_2 >= 0 AND tiempo_jugador_2 <= 300",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "select_1794869760249",
+          "beforeId": null,
+          "afterId": "output_1794873061115",
+          "selected": true,
+          "running": false
+        },
+        "output_1794872054638": {
+          "id": "output_1794872054638",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Vidas invalidas\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "running": false
+        },
+        "loop_1794872332272": {
+          "id": "loop_1794872332272",
+          "type": "Diamond",
+          "kind": "Loop",
+          "text": "estado_niveles==1 or estado_niveles==0",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "select_1794870143958",
+          "beforeId": null,
+          "afterId": "output_1794873091082",
+          "selected": false,
+          "running": false
+        },
+        "input_1794872461701": {
+          "id": "input_1794872461701",
+          "type": "Parallelogram",
+          "ioKind": "Input",
+          "text": "estado_niveles",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "prompt": "Han terminado todos los niveles? Si(escribe:1) / No (escribe: 0):",
+          "running": false
+        },
+        "input_1794872522962": {
+          "id": "input_1794872522962",
+          "type": "Parallelogram",
+          "ioKind": "Input",
+          "text": "tiempo_jugador_2",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": true,
+          "prompt": "Tiempo de partida (300s-0s):",
+          "running": false
+        },
+        "input_1794872553488": {
+          "id": "input_1794872553488",
+          "type": "Parallelogram",
+          "ioKind": "Input",
+          "text": "vidas_jugador_2",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "prompt": "Numero de vidas (0-3):",
+          "running": false
+        },
+        "input_1794872592534": {
+          "id": "input_1794872592534",
+          "type": "Parallelogram",
+          "ioKind": "Input",
+          "text": "tiempo_jugador_1",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "prompt": "Tiempo de partida (300s-0s):",
+          "running": false
+        },
+        "input_1794872622248": {
+          "id": "input_1794872622248",
+          "type": "Parallelogram",
+          "ioKind": "Input",
+          "text": "vidas_jugador_1",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "prompt": "Numero de vidas (0-3):",
+          "running": false
+        },
+        "loop_1794872661475": {
+          "id": "loop_1794872661475",
+          "type": "Diamond",
+          "kind": "Loop",
+          "text": "modo_de_juego== 1 or modo_de_juego==2",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "select_1794868480375",
+          "beforeId": null,
+          "afterId": "output_1794872721241",
+          "selected": false,
+          "running": false
+        },
+        "output_1794872721241": {
+          "id": "output_1794872721241",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"modo de juego invalido\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "input_1794872739746",
+          "selected": false,
+          "running": false
+        },
+        "input_1794872739746": {
+          "id": "input_1794872739746",
+          "type": "Parallelogram",
+          "ioKind": "Input",
+          "text": "modo_de_juego",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "prompt": "modo de juego: Solitario (escriba: 1)  Multijugador (escriba: 2)",
+          "running": false
+        },
+        "output_1794872789349": {
+          "id": "output_1794872789349",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Vida invalida\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "input_1794872813010",
+          "selected": false,
+          "running": false
+        },
+        "input_1794872813010": {
+          "id": "input_1794872813010",
+          "type": "Parallelogram",
+          "ioKind": "Input",
+          "text": "vidas",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "prompt": "Numero de vidas(0-3):",
+          "running": false
+        },
+        "output_1794872858555": {
+          "id": "output_1794872858555",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Tiempo invalido\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "input_1794872908997",
+          "selected": false,
+          "running": false
+        },
+        "input_1794872908997": {
+          "id": "input_1794872908997",
+          "type": "Parallelogram",
+          "ioKind": "Input",
+          "text": "tiempo",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "prompt": "Tiempo de partida (300s-0s, ingresa solo numeros):",
+          "running": false
+        },
+        "output_1794872938523": {
+          "id": "output_1794872938523",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Vidas invalidas\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "input_1794872622248",
+          "selected": false,
+          "running": false
+        },
+        "output_1794872988940": {
+          "id": "output_1794872988940",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"tiempo inválido\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "input_1794872592534",
+          "selected": false,
+          "running": false
+        },
+        "output_1794873021229": {
+          "id": "output_1794873021229",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Vidas invalidas\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "input_1794872553488",
+          "selected": false,
+          "running": false
+        },
+        "output_1794873061115": {
+          "id": "output_1794873061115",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Tiempo inválido\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "input_1794872522962",
+          "selected": true,
+          "running": false
+        },
+        "output_1794873091082": {
+          "id": "output_1794873091082",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Estado de nivel inválido\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "input_1794872461701",
+          "selected": false,
+          "running": false
+        },
+        "loop_1794873146862": {
+          "id": "loop_1794873146862",
+          "type": "Diamond",
+          "kind": "Loop",
+          "text": "estado_de_nivel==0 or estado_de_nivel==1",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "select_1794869114957",
+          "beforeId": null,
+          "afterId": "output_1794873178575",
+          "selected": false,
+          "running": false
+        },
+        "output_1794873178575": {
+          "id": "output_1794873178575",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Estado de nivel inválido\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "input_1794873220073",
+          "selected": false,
+          "running": false
+        },
+        "input_1794873220073": {
+          "id": "input_1794873220073",
+          "type": "Parallelogram",
+          "ioKind": "Input",
+          "text": "estado_de_nivel",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "prompt": "Ha terminado el nivel    Si(escriba 1) / No(escriba 0):",
+          "running": false
+        }
+      },
+      "startId": "start",
+      "endId": "end"
+    }
+  }
+}
